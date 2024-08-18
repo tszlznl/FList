@@ -60,37 +60,12 @@ export default defineUserConfig({
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
     },
+
     {
-      mountPath: "/huggingface测试",
-      analysis: huggingFaceDatasetsAnalysis({
-        userName: "Open-Orca",
-        datasetsName: "OpenOrca",
-        branchName: "main",
-        path: "/",
-        //最大深度,如果文件夹有很多层最大递归解析多少层，默认10
-        maxDeep: 3
-      }),
-    },
-    {
-      mountPath: "/gitee测试/发行版",
-      analysis: giteeReleasesFilesAnalysis({
-        user: "jja8",
-        repository: "flist-test",
-        direction: "desc"
-      })
-    },
-    {
-      mountPath: "/gitee测试/仓库",
-      analysis: giteeReposAnalysis({
-        user: "jja8",
-        repository: "flist-test"
-      }),
-    },
-    {
-      mountPath: "/ProgrammingVTuberLogos",
+      mountPath: "/tszlznl/list",
       analysis: githubReposAnalysis({
         user: "tszlznl",
-        repository: "ProgrammingVTuberLogos",
+        repository: "list",
       }),
       downProxy: cloudflarePagesDownProxy()
     },
